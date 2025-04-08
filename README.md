@@ -78,35 +78,39 @@ forward movement toward the goal.
 movements with the ball.
 
 3. Player and Goalkeeper Logic
-○ Player Movement:
-■ Controls the shooter’s appearance and motion toward the ball when a
+   
+Player Movement:
+Controls the shooter’s appearance and motion toward the ball when a
 shot is initiated.
-■ Allows the user to select the shooter’s color dynamically before gameplay.
-○ Goalkeeper Control:
-■ Responds to user inputs (arrow keys) to move the goalkeeper in the left,
+
+Allows the user to select the shooter’s color dynamically before gameplay.
+
+Goalkeeper Control:
+
+Responds to user inputs (arrow keys) to move the goalkeeper in the left,
 right, or center positions.
-■ Determines whether the goalkeeper successfully blocks a shot based on
+
+Determines whether the goalkeeper successfully blocks a shot based on
 the ball’s trajectory.
 
-4. Scoreboard Logic
-○ Implements a graphical scoreboard to display goals and saves as colored
+5. Scoreboard Logic
+Implements a graphical scoreboard to display goals and saves as colored
 circles.
-○ Updates the player’s goals and goalkeeper’s saves dynamically based on the
+
+Updates the player’s goals and goalkeeper’s saves dynamically based on the
 outcome of each shot.
-○ Uses on-screen pixel-to-coordinate mapping to accurately render the circles.
 
-5. State Machine (FSM)
-○ Controls the game flow between the following states:
+Uses on-screen pixel-to-coordinate mapping to accurately render the circles.
 
-Main Menu: Displays “ENTER TO PLAY” and waits for the user to press
-Enter.
+6. State Machine (FSM)
 
-Player Color Selection: Allows the player to choose the shooter’s color
-(Red, Green, or Blue).
+Controls the game flow between the following states:
 
-Gameplay: Simulates the penalty shootout, including ball movement,
-player and goalkeeper control, and scoring.
-○ Manages transitions based on user inputs (e.g., Enter, Escape, R/G/B keys).
+Main Menu: Displays “ENTER TO PLAY” and waits for the user to press enter.
+
+Player Color Selection: Allows the player to choose the shooter’s color (Red, Green, or Blue).
+
+Gameplay: Simulates the penalty shootout, including ball movement, player and goalkeeper control, and scoring and manages transitions based on user inputs (e.g., Enter, Escape, R/G/B keys).
 
 7. Football Background Module (Football_example)
    
@@ -117,8 +121,10 @@ are rendered.
 
 **State Machine for Game Flow:**
 A critical module to manage game transitions between game states will be done through the
-implemented game state machine in the color_mapper module. The game states will be as
-follows:
+implemented game state machine in the color_mapper module. 
+
+The game states will be as follows:
+
 MENU: shows the main menu and waits for a key press, preferably Enter, to start the game.
 
 PLAYER_COLOR_SELECTION: This allows a player to select the shooter color, Red, Green,
