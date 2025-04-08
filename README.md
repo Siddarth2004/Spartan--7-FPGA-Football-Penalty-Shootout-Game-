@@ -97,17 +97,22 @@ outcome of each shot.
 
 5. State Machine (FSM)
 ○ Controls the game flow between the following states:
-■ Main Menu: Displays “ENTER TO PLAY” and waits for the user to press
+
+Main Menu: Displays “ENTER TO PLAY” and waits for the user to press
 Enter.
-■ Player Color Selection: Allows the player to choose the shooter’s color
+
+Player Color Selection: Allows the player to choose the shooter’s color
 (Red, Green, or Blue).
-■ Gameplay: Simulates the penalty shootout, including ball movement,
+
+Gameplay: Simulates the penalty shootout, including ball movement,
 player and goalkeeper control, and scoring.
 ○ Manages transitions based on user inputs (e.g., Enter, Escape, R/G/B keys).
 
-6. Football Background Module (Football_example)
-○ Provides the static football field background displayed during gameplay.
-○ Ensures a visually appealing base layer on which all dynamic game components
+7. Football Background Module (Football_example)
+   
+Provides the static football field background displayed during gameplay.
+
+Ensures a visually appealing base layer on which all dynamic game components
 are rendered.
 
 **State Machine for Game Flow:**
@@ -115,7 +120,9 @@ A critical module to manage game transitions between game states will be done th
 implemented game state machine in the color_mapper module. The game states will be as
 follows:
 MENU: shows the main menu and waits for a key press, preferably Enter, to start the game.
+
 PLAYER_COLOR_SELECTION: This allows a player to select the shooter color, Red, Green,
 or Blue, and initializes a game's state.
+
 GAME: Contains all game logic, moving of the ball, player movement, action of the goalkeeper,
 and updates the score. Listens for the Escape key to return to the menu
