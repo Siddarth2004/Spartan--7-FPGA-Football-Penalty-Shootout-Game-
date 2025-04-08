@@ -3,6 +3,7 @@
 
 
 **Idea and Overview:**
+
 It is a multiplayer game with penalty shoot-out scoring, graphics, and animations for two players
 taking turns either as shooter or goalkeeper, with pushing buttons controlling the direction and
 power of the shots and the goalie directing his dive to save the goal. The final result is the
@@ -13,6 +14,7 @@ varied based on the button combination used, which indeed will add a level of st
 game.
 
 **List of Features:**
+
 Multiplayer: Two-player mode wherein players alternate shooting and goalkeeping turns.
 Scoreboard: Displays the live score and updates with a goal. Button Controls: Buttons control
 the shooting direction and goalkeeper movements.
@@ -101,7 +103,7 @@ right, or center positions.
 Determines whether the goalkeeper successfully blocks a shot based on
 the ball’s trajectory.
 
-5. **Scoreboard Logic**
+4. **Scoreboard Logic**
 Implements a graphical scoreboard to display goals and saves as colored
 circles.
 
@@ -110,7 +112,7 @@ outcome of each shot.
 
 Uses on-screen pixel-to-coordinate mapping to accurately render the circles.
 
-6. **State Machine (FSM)**
+5. **State Machine (FSM)**
 
 Controls the game flow between the following states:
 
@@ -120,7 +122,7 @@ Player Color Selection: Allows the player to choose the shooter’s color (Red, 
 
 Gameplay: Simulates the penalty shootout, including ball movement, player and goalkeeper control, and scoring and manages transitions based on user inputs (e.g., Enter, Escape, R/G/B keys).
 
-7. **Football Background Module (Football_example)**
+6. **Football Background Module (Football_example)**
    
 Provides the static football field background displayed during gameplay.
 
