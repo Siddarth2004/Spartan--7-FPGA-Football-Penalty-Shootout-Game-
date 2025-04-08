@@ -60,26 +60,34 @@ handling, and FSMs to create a fully functional game that is clear in visual and
 
 **Key Modules in the Final Project:**
 
-1. Color Mapper (color_mapper.sv)
-○ The central module responsible for coordinating the rendering of all game
+1. **Color Mapper (color_mapper.sv)**
+
+The central module responsible for coordinating the rendering of all game
 components onto the HDMI display.
-○ Combines multiple graphical elements, including the ball, player, goalkeeper,
+
+Combines multiple graphical elements, including the ball, player, goalkeeper,
 goalpost, net, and scoreboard.
-○ Implements state transitions between screens (Main Menu, Player Color
+
+Implements state transitions between screens (Main Menu, Player Color
 Selection, and Gameplay).
-○ Dynamically assigns colors for different components and manages user inputs for
+
+Dynamically assigns colors for different components and manages user inputs for
 shooting and goalkeeping.
 
-2. Ball Module (ball.sv)
-○ Handles the motion of the ball during gameplay.
-○ Updates the ball’s position based on the player’s shooting input and simulates
+2. **Ball Module (ball.sv)**
+
+Handles the motion of the ball during gameplay.
+
+Updates the ball’s position based on the player’s shooting input and simulates
 forward movement toward the goal.
-○ Provides feedback signals such as player_at_ball_signal to synchronize player
+
+Provides feedback signals such as player_at_ball_signal to synchronize player
 movements with the ball.
 
-3. Player and Goalkeeper Logic
+3. **Player and Goalkeeper Logic**
    
 Player Movement:
+
 Controls the shooter’s appearance and motion toward the ball when a
 shot is initiated.
 
@@ -93,7 +101,7 @@ right, or center positions.
 Determines whether the goalkeeper successfully blocks a shot based on
 the ball’s trajectory.
 
-5. Scoreboard Logic
+5. **Scoreboard Logic**
 Implements a graphical scoreboard to display goals and saves as colored
 circles.
 
@@ -102,7 +110,7 @@ outcome of each shot.
 
 Uses on-screen pixel-to-coordinate mapping to accurately render the circles.
 
-6. State Machine (FSM)
+6. **State Machine (FSM)**
 
 Controls the game flow between the following states:
 
@@ -112,7 +120,7 @@ Player Color Selection: Allows the player to choose the shooter’s color (Red, 
 
 Gameplay: Simulates the penalty shootout, including ball movement, player and goalkeeper control, and scoring and manages transitions based on user inputs (e.g., Enter, Escape, R/G/B keys).
 
-7. Football Background Module (Football_example)
+7. **Football Background Module (Football_example)**
    
 Provides the static football field background displayed during gameplay.
 
@@ -120,6 +128,7 @@ Ensures a visually appealing base layer on which all dynamic game components
 are rendered.
 
 **State Machine for Game Flow:**
+
 A critical module to manage game transitions between game states will be done through the
 implemented game state machine in the color_mapper module. 
 
